@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>MyBenchmark-20240904-173955</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4037/23H2/2023Update/SunValley3)
+AMD Ryzen 7 PRO 6850U with Radeon Graphics, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 8.0.203
+  [Host]     : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
+  Job-HTRHSY : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>MaxIterationCount=5  MaxWarmupIterationCount=5  MinIterationCount=3  
+MinWarmupIterationCount=3  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Exponent</th><th>Base</th><th>Mean   </th><th>Error</th><th>StdDev</th><th>Ratio</th>
+</tr>
+</thead><tbody><tr><td>ipowerOf2</td><td>1</td><td>5</td><td>0.2236 ns</td><td>0.0213 ns</td><td>0.0033 ns</td><td>0.17</td>
+</tr><tr><td>PowerOf2</td><td>1</td><td>5</td><td>1.2877 ns</td><td>0.0242 ns</td><td>0.0037 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>2</td><td>5</td><td>0.2246 ns</td><td>0.0154 ns</td><td>0.0024 ns</td><td>0.17</td>
+</tr><tr><td>PowerOf2</td><td>2</td><td>5</td><td>1.3093 ns</td><td>0.0391 ns</td><td>0.0021 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>3</td><td>5</td><td>0.4357 ns</td><td>0.0232 ns</td><td>0.0036 ns</td><td>0.17</td>
+</tr><tr><td>PowerOf2</td><td>3</td><td>5</td><td>2.5261 ns</td><td>0.0219 ns</td><td>0.0034 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>4</td><td>5</td><td>0.6484 ns</td><td>0.0170 ns</td><td>0.0009 ns</td><td>0.26</td>
+</tr><tr><td>PowerOf2</td><td>4</td><td>5</td><td>2.5302 ns</td><td>0.0435 ns</td><td>0.0024 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>5</td><td>5</td><td>0.9209 ns</td><td>0.0457 ns</td><td>0.0071 ns</td><td>0.24</td>
+</tr><tr><td>PowerOf2</td><td>5</td><td>5</td><td>3.8318 ns</td><td>0.0576 ns</td><td>0.0089 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>6</td><td>5</td><td>1.1349 ns</td><td>0.0196 ns</td><td>0.0030 ns</td><td>0.30</td>
+</tr><tr><td>PowerOf2</td><td>6</td><td>5</td><td>3.8242 ns</td><td>0.0255 ns</td><td>0.0014 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>7</td><td>5</td><td>1.3526 ns</td><td>0.0416 ns</td><td>0.0064 ns</td><td>0.26</td>
+</tr><tr><td>PowerOf2</td><td>7</td><td>5</td><td>5.1362 ns</td><td>0.0552 ns</td><td>0.0030 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>8</td><td>5</td><td>1.5595 ns</td><td>0.0262 ns</td><td>0.0040 ns</td><td>0.30</td>
+</tr><tr><td>PowerOf2</td><td>8</td><td>5</td><td>5.1370 ns</td><td>0.0402 ns</td><td>0.0062 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>9</td><td>5</td><td>1.7778 ns</td><td>0.0399 ns</td><td>0.0104 ns</td><td>0.27</td>
+</tr><tr><td>PowerOf2</td><td>9</td><td>5</td><td>6.4863 ns</td><td>0.1264 ns</td><td>0.0196 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>10</td><td>5</td><td>1.9740 ns</td><td>0.0117 ns</td><td>0.0006 ns</td><td>0.31</td>
+</tr><tr><td>PowerOf2</td><td>10</td><td>5</td><td>6.4117 ns</td><td>0.0582 ns</td><td>0.0090 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>32</td><td>5</td><td>7.4623 ns</td><td>0.0954 ns</td><td>0.0148 ns</td><td>0.36</td>
+</tr><tr><td>PowerOf2</td><td>32</td><td>5</td><td>20.7525 ns</td><td>0.1604 ns</td><td>0.0088 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>64</td><td>5</td><td>14.3176 ns</td><td>0.1780 ns</td><td>0.0098 ns</td><td>0.28</td>
+</tr><tr><td>PowerOf2</td><td>64</td><td>5</td><td>50.5012 ns</td><td>0.9847 ns</td><td>0.0540 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>250</td><td>5</td><td>56.2794 ns</td><td>0.5054 ns</td><td>0.0782 ns</td><td>0.32</td>
+</tr><tr><td>PowerOf2</td><td>250</td><td>5</td><td>173.5438 ns</td><td>2.3428 ns</td><td>0.6084 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>1000</td><td>5</td><td>215.9882 ns</td><td>2.5557 ns</td><td>0.3955 ns</td><td>0.33</td>
+</tr><tr><td>PowerOf2</td><td>1000</td><td>5</td><td>660.4351 ns</td><td>11.6311 ns</td><td>1.7999 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>1500</td><td>5</td><td>324.0240 ns</td><td>7.2078 ns</td><td>1.8719 ns</td><td>0.33</td>
+</tr><tr><td>PowerOf2</td><td>1500</td><td>5</td><td>995.6600 ns</td><td>15.2738 ns</td><td>0.8372 ns</td><td>1.00</td>
+</tr><tr><td>ipowerOf2</td><td>2000</td><td>5</td><td>427.5764 ns</td><td>1.7746 ns</td><td>0.0973 ns</td><td>0.32</td>
+</tr><tr><td>PowerOf2</td><td>2000</td><td>5</td><td>1,335.0964 ns</td><td>16.3562 ns</td><td>2.5311 ns</td><td>1.00</td>
+</tr></tbody></table>
+</body>
+</html>
