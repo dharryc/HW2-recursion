@@ -8,15 +8,18 @@ BenchmarkRunner.Run<MyBenchmark>();
 [MinIterationCount(3), MaxIterationCount(5)]
 public class MyBenchmark
 {
-    [Params(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 32, 64, 250, 1000, 1500, 2000)]
+    [Params(23, 24, 25, 26, 27, 28, 29, 30)]
     public int Exponent { get; set; }
 
-    [Params(5)]
-    public int Base { get; set; }
+    // [Params(5)]
+    // public int Base { get; set; }
 
     [Benchmark]
     public int ipowerOf2() => Algorithms.iterativePowerOf2(Exponent);
 
     [Benchmark(Baseline = true)]
-    public int PowerOf2() => Algorithms.recursivePowerOf2(Exponent);
+    public int fastpowerOf2() => Algorithms.fastPowerOf2(Exponent);
+
+    [Benchmark]
+    public int superPowerOf2() => Algorithms.superAlgorithm(Exponent);
 }

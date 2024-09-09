@@ -334,3 +334,4 @@ C:\Users\dharr\HOMEWORK\algorithms\tests\obj\Debug\net8.0\refint\tests.dll
 C:\Users\dharr\HOMEWORK\algorithms\tests\obj\Debug\net8.0\tests.pdb
 C:\Users\dharr\HOMEWORK\algorithms\tests\obj\Debug\net8.0\tests.genruntimeconfig.cache
 C:\Users\dharr\HOMEWORK\algorithms\tests\obj\Debug\net8.0\ref\tests.dll
+C:\Users\dharr\HOMEWORK\algorithms\tests\obj\Debug\net8.0\tests.sourcelink.json
